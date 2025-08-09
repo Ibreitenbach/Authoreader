@@ -1,0 +1,19 @@
+.button {
+    /* Set the background and text color */
+    background-color: #007bff; /* A nice blue */
+    color: white;
+
+    /* Add some spacing inside the button */
+    padding: 10px 15px;
+
+    /* Remove the default link underline */
+    text-decoration: none;
+
+    /* Optional: Round the corners */
+    border-radius: 5px;
+}
+
+/* Optional: Add a hover effect */
+.button:hover {
+    background-color: #0056b3; /* A darker blue */
+}
