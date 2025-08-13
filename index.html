@@ -1,14 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcome!</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to 8th Grade!</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a modern, friendly look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for clean, modern icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles to apply the Poppins font */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Style for the slides - hidden by default */
+        .slide {
+            display: none;
+        }
+        /* Style for the active slide */
+        .active-slide {
+            display: block;
+        }
+    </style>
 </head>
-<body>
-    <h1>My Website</h1>
-    <p>Welcome to my site. Click the button below to launch the Authoreader app.</p>
-    
-    <a href="authoreader.html" class="button">Launch App</a>
-    <a href="Welcome.html" class="button">Launch App</a>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- Slideshow Container -->
+    <div id="slideshow-container" class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="relative h-[80vh] min-h-[600px]">
+            <!-- Slide 1: Welcome & Bell-Ringer -->
+            <div class="slide active-slide p-8 md:p-12 h-full flex flex-col justify-center items-center text-center bg-gradient-to-br from-purple-500 to-indigo-600 text-white">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGk3M3R6bWl4c2ZtYmZpOWZ2cW94M3R3eXN5cW51Z2x5b3Z1a3ZpbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKSjRrfOfv_aBOo/giphy.gif" alt="Welcome GIF" class="w-48 h-48 rounded-full mb-6 shadow-lg">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to 8th Grade ELA!</h1>
+                <p class="text-xl md:text-2xl mb-8">So glad you're here!</p>
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-md max-w-lg w-full">
+                    <h2 class="text-2xl font-semibold mb-3 text-indigo-600">Bell-Ringer!</h2>
+                    <p class="text-lg">Grab a sticky note. Write **TWO** things you hope to learn this year and **ONE** personal goal. Stick it on the "Our Hopes & Goals" poster!</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Meet Your Teacher -->
+            <div class="slide p-8 md:p-12 h-full flex flex-col lg:flex-row justify-center items-center bg-gray-50">
+                <div class="lg:w-1/3 text-center mb-8 lg:mb-0">
+                    <img src="https://placehold.co/250x250/E2E8F0/4A5568?text=Your+Photo" alt="Teacher Photo" class="w-48 h-48 md:w-56 md:h-56 rounded-full mx-auto shadow-lg mb-4 border-4 border-white">
+                    <h2 class="text-3xl font-bold text-gray-800">Mr. Davison</h2>
+                    <p class="text-gray-500 text-lg">Your Guide for This Year</p>
+                </div>
+                <div class="lg:w-2/3 lg:pl-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center lg:text-left">A Little About Me...</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                            <i data-lucide="book-open" class="w-10 h-10 text-sky-500 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">Loves Reading</h4>
+                                <p class="text-gray-600">Especially sci-fi!</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                           <i data-lucide="gamepad-2" class="w-10 h-10 text-red-500 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">Video Game Fan</h4>
+                                <p class="text-gray-600">Big fan of RPGs.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                            <i data-lucide="dog" class="w-10 h-10 text-yellow-500 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">Dog Person</h4>
+                                <p class="text-gray-600">My golden retriever is named Gus.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                           <i data-lucide="coffee" class="w-10 h-10 text-amber-700 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">Fueled By</h4>
+                                <p class="text-gray-600">Coffee & curiosity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Our Mission -->
+            <div class="slide p-8 md:p-12 h-full flex flex-col justify-center items-center text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1528642474498-1af0c17fd8c3?q=80&w=2069&auto=format&fit=crop');">
+                <div class="bg-black bg-opacity-60 p-8 rounded-xl">
+                    <h2 class="text-2xl font-semibold text-white mb-4 uppercase tracking-widest">Our Mission</h2>
+                    <p class="text-3xl md:text-5xl font-bold text-white leading-tight">In this room, we are a community of thinkers. We ask bold questions, treat each other with respect, learn from our mistakes, and support every member of our crew.</p>
+                </div>
+            </div>
+
+            <!-- Slide 4: Our Community Agreement -->
+            <div class="slide p-8 md:p-12 h-full flex flex-col justify-center items-center bg-teal-50">
+                <h2 class="text-4xl font-bold text-teal-800 mb-8">Our Agreement for a Great Year</h2>
+                <div class="w-full max-w-3xl space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex items-center transition-transform hover:scale-105">
+                        <i data-lucide="users" class="w-16 h-16 text-teal-500 mr-6"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800">Respect Everyone, Every Time.</h3>
+                            <p class="text-gray-600 mt-1">This includes people, property, ideas, and yourself.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex items-center transition-transform hover:scale-105">
+                        <i data-lucide="brain-circuit" class="w-16 h-16 text-teal-500 mr-6"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800">Come Prepared to Engage.</h3>
+                            <p class="text-gray-600 mt-1">Bring your materials, an open mind, and a willingness to try.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex items-center transition-transform hover:scale-105">
+                        <i data-lucide="check-circle" class="w-16 h-16 text-teal-500 mr-6"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800">Take Responsibility for Your Actions.</h3>
+                            <p class="text-gray-600 mt-1">Own your choices, both the awesome ones and the mistakes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Seating Chart -->
+            <div class="slide p-8 md:p-12 h-full flex flex-col justify-center items-center text-center bg-slate-800" style="background-image: url('data:image/svg+xml;utf8,<svg width=\"100\" height=\"100\" transform=\"rotate(25)\" version=\"1.1\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"%2394a3b8\" fill-opacity=\"0.1\"><polygon points=\"0 100 0 0 100 0\"/><polygon points=\"100 100 0 100 100 0\"/></g></svg>');">
+                <h2 class="text-4xl font-bold text-white mb-4">Your Home Base</h2>
+                <p class="text-xl text-slate-300 mb-8 max-w-2xl">I've set up our 'home bases' to help us collaborate and focus. Expect them to change every few weeks so we can learn to work well with everyone!</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Classroom Layout - Term 1</h3>
+                    <!-- Placeholder for seating chart diagram -->
+                    <div class="grid grid-cols-4 gap-4 text-center">
+                        <div class="bg-slate-200 p-4 rounded">Table 1</div>
+                        <div class="bg-slate-200 p-4 rounded">Table 2</div>
+                        <div class="bg-slate-200 p-4 rounded">Table 3</div>
+                        <div class="bg-slate-200 p-4 rounded">Table 4</div>
+                        <div class="bg-slate-200 p-4 rounded">Table 5</div>
+                        <div class="bg-slate-200 p-4 rounded">Table 6</div>
+                        <div class="bg-slate-200 p-4 rounded">Table 7</div>
+                        <div class="bg-slate-200 p-4 rounded">Table 8</div>
+                    </div>
+                     <div class="mt-4 border-t-2 pt-4 text-slate-600">Teacher Desk Area</div>
+                </div>
+            </div>
+            
+            <!-- Slide 6: Routines & Procedures -->
+            <div class="slide p-8 md:p-12 h-full flex flex-col justify-center items-center bg-sky-50">
+                <h2 class="text-4xl font-bold text-sky-800 mb-8">The Daily Flow</h2>
+                <p class="text-xl text-sky-700 mb-10 text-center max-w-2xl">Smooth routines help us waste less time on confusion and spend more time on awesome learning!</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+                    <div class="bg-white p-5 rounded-lg shadow-lg text-center">
+                        <i data-lucide="log-in" class="w-16 h-16 text-sky-500 mx-auto mb-3"></i>
+                        <h3 class="text-xl font-semibold">Entering the Room</h3>
+                        <p class="text-gray-600 mt-1">Enter calmly, check the board for the bell-ringer, and begin.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-lg text-center">
+                        <i data-lucide="hand" class="w-16 h-16 text-sky-500 mx-auto mb-3"></i>
+                        <h3 class="text-xl font-semibold">Getting My Attention</h3>
+                        <p class="text-gray-600 mt-1">Raise your hand, and I'll be with you as soon as I can.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-lg text-center">
+                        <i data-lucide="send" class="w-16 h-16 text-sky-500 mx-auto mb-3"></i>
+                        <h3 class="text-xl font-semibold">Turning in Work</h3>
+                        <p class="text-gray-600 mt-1">All assignments will be submitted through Google Classroom.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-lg text-center">
+                        <i data-lucide="folder-clock" class="w-16 h-16 text-sky-500 mx-auto mb-3"></i>
+                        <h3 class="text-xl font-semibold">If You're Absent</h3>
+                        <p class="text-gray-600 mt-1">Check the 'While You Were Out' folder in Google Classroom.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Consequences -->
+            <div class="slide p-8 md:p-12 h-full flex flex-col justify-center items-center text-center bg-gray-200">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">When We Get Off-Track</h2>
+                <p class="text-xl text-gray-600 mb-10 max-w-2xl">Everyone makes mistakes. My goal is to help you get back on track, not to get you 'in trouble'.</p>
+                <div class="w-full max-w-md">
+                    <div class="space-y-4">
+                        <!-- Step 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                            <div class="bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl mr-4">1</div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-left">A Non-Verbal Reminder</h3>
+                                <p class="text-gray-600 text-left text-sm">A quick glance or a tap on the desk.</p>
+                            </div>
+                        </div>
+                        <!-- Arrow -->
+                        <div class="flex justify-center"><i data-lucide="arrow-down" class="w-8 h-8 text-gray-400"></i></div>
+                        <!-- Step 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                            <div class="bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl mr-4">2</div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-left">A Quick, Quiet Chat</h3>
+                                <p class="text-gray-600 text-left text-sm">A brief conversation at your desk.</p>
+                            </div>
+                        </div>
+                        <!-- Arrow -->
+                        <div class="flex justify-center"><i data-lucide="arrow-down" class="w-8 h-8 text-gray-400"></i></div>
+                        <!-- Step 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                            <div class="bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl mr-4">3</div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-left">A Chance to Reset</h3>
+                                <p class="text-gray-600 text-left text-sm">Moving to a different spot to reflect.</p>
+                            </div>
+                        </div>
+                         <!-- Arrow -->
+                        <div class="flex justify-center"><i data-lucide="arrow-down" class="w-8 h-8 text-gray-400"></i></div>
+                        <!-- Step 4 -->
+                        <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                            <div class="bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl mr-4">4</div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-left">We Partner with Home</h3>
+                                <p class="text-gray-600 text-left text-sm">A call or email to get your family on our team.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Exit Ticket -->
+            <div class="slide p-8 md:p-12 h-full flex flex-col justify-center items-center text-center bg-gradient-to-br from-green-400 to-cyan-500 text-white">
+                <i data-lucide="message-square-plus" class="w-24 h-24 mb-6"></i>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Your Voice Matters!</h2>
+                <p class="text-xl md:text-2xl mb-8 max-w-2xl">To wrap up, please complete the Google Form linked in our Google Classroom. I read every single response!</p>
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg w-full max-w-lg">
+                    <h3 class="text-2xl font-semibold text-cyan-600 mb-3">Exit Ticket Questions:</h3>
+                    <ul class="text-lg text-left list-disc list-inside space-y-2">
+                        <li>What's one thing from today you're excited about?</li>
+                        <li>What's one thing you still have a question about?</li>
+                        <li>Is there anything you want me to know to help you succeed?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="mt-6 flex justify-between w-full max-w-4xl">
+        <button id="prevBtn" class="bg-white text-gray-700 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center">
+            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i> Previous
+        </button>
+        <div id="slide-counter" class="text-gray-600 font-semibold flex items-center">Slide 1 of 8</div>
+        <button id="nextBtn" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition-colors flex items-center">
+            Next <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+        </button>
+    </div>
+
+    <script>
+        // --- Slideshow Logic ---
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slideCounter = document.getElementById('slide-counter');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active-slide');
+            });
+
+            // Show the correct slide
+            slides[n].classList.add('active-slide');
+
+            // Update slide counter
+            slideCounter.textContent = `Slide ${n + 1} of ${totalSlides}`;
+
+            // Update button states
+            prevBtn.disabled = n === 0;
+            nextBtn.disabled = n === totalSlides - 1;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        // Event Listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Initialize the first slide
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+            lucide.createIcons(); // Initialize Lucide icons
+        });
+    </script>
 </body>
 </html>
